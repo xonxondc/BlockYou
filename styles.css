@@ -1,0 +1,49 @@
+/* Banner & overlay ads */
+#masthead-ad,
+ytd-ad-slot-renderer,
+ytd-display-ad-renderer,
+ytd-banner-promo-renderer,
+ytd-promoted-sparkles-web-renderer,
+ytd-promoted-video-renderer,
+ytd-in-feed-ad-layout-renderer,
+ytd-statement-banner-renderer,
+yt-mealbar-promo-renderer,
+ytd-merch-shelf-renderer,
+#player-ads,
+.ytp-ad-module,
+.ytp-ad-player-overlay,
+.ytp-ad-overlay-container,
+.ytp-ad-image-overlay,
+.ytp-ad-text-overlay,
+.ytp-ad-overlay-slot,
+.video-ads,
+ytd-rich-item-renderer:has(ytd-display-ad-renderer),
+ytd-rich-item-renderer:has(ytd-ad-slot-renderer),
+ytd-reel-video-renderer:has(.ytd-ad-slot-renderer),
+tp-yt-paper-dialog:has(yt-mealbar-promo-renderer),
+ytd-popup-container:has(a[href*="premium"]),
+ytd-engagement-panel-section-list-renderer[target-id="engagement-panel-ads"],
+#related ytd-ad-slot-renderer,
+ytd-companion-slot-renderer,
+.ytd-action-companion-ad-renderer,
+ytd-player-legacy-desktop-watch-ads-renderer {
+  display: none !important;
+}
+
+/* Ultra aggressive mode extras */
+body.blockyou-ultra ytd-rich-item-renderer:has([class*="ad"]),
+body.blockyou-ultra ytd-rich-item-renderer:has([class*="sponsor"]),
+body.blockyou-ultra ytd-rich-item-renderer:has([class*="promo"]),
+body.blockyou-ultra ytd-compact-promoted-video-renderer,
+body.blockyou-ultra ytd-search-pyv-renderer {
+  display: none !important;
+}
+
+/* Anti-adblock / Premium prompts */
+ytd-enforcement-message-view-model,
+tp-yt-paper-dialog:has([class*="premium"]),
+ytd-popup-container:has([href*="/premium"]),
+yt-confirm-dialog-renderer:has([class*="adblock"]),
+.ytp-ad-feedback-dialog-container {
+  display: none !important;
+}
